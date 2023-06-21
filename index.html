@@ -1,36 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    
+    <div class="main-container">
+      <div class="todo">
+        <header class="header">
+          <section class="logo">
+            <h2 class="logo-title">TODO</h2>
+            <button class="btn btn--theme" id="theme-toggle">
+              <img class="theme-icon" src="./images/icon-moon.svg" alt="moon icon to apply dark mode" />
+              <img src="./images/icon-sun.svg" alt="sun icon to apply light mode" />
+            </button>
+          </section>
+          <div class="todo-header">
+            <div class="todo-circle">
+            </div>
+            <label for="todo-input">Create a new todo</label>
+            <input type="text" class="todo-input" name="todo-input" id="todo-input" placeholder="Create a new todo..." />
+          </div>
+        </header>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+        <main class="main">
+          <ul class="todo-list" id="todo-list">
+            <!-- items added by JavaScript -->
+          </ul>
+          <div class="todo-filters">
+            <div class="todo-filters-sides">
+              <p class="btn"><span id="items-left">5</span> items(s) left</p>
+              <button class="btn btn--clear" id="clear-completed">Clear Completed</button>
+            </div>
+            <div class="todo-filters-center">
+              <input type="radio" name="filter" id="all" value="all" class="btn btn--bold" checked>
+              <label class="btn btn--bold" for="all">All</label>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+              <input type="radio" name="filter" id="active" value="active" class="btn btn--bold">
+              <label class="btn btn--bold" for="active">Active</label>
 
-  Todo
+              <input type="radio" name="filter" id="completed" value="completed" class="btn btn--bold">
+              <label class="btn btn--bold" for="completed">Completed</label>
+            </div>
+          </div>
+        </main>
 
-  <!-- Add dynamic number --> items left
+        <footer>
+          <div class="attribution">
+            <p>
+              Challenge by
+              <a href="https://www.frontendmentor.io?ref=challenge"
+                 target="_blank"
+                 >Fronted Mentor</a>. Coded by <a href="https://github.com/Anshul1720">Anshul Gupta</a>.
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
 
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </body>
 </html>
